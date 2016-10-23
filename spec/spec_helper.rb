@@ -2,7 +2,7 @@ require 'coveralls'
 Coveralls.wear_merged!
 
 require 'rack/test'
-require 'pivertiser'
+require 'wheresMyPi'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
@@ -17,6 +17,6 @@ RSpec.configure do |config|
 
   include Rack::Test::Methods
   def app
-    Pivertiser::App
+    WheresMyPi::App
   end
 end
