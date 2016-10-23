@@ -1,7 +1,7 @@
 require 'rack/conneg'
 require 'rack/tracker'
 
-module Pivertiser
+module WheresMyPi
   class App < Sinatra::Base
     set :public_folder, 'public'
     set :views, 'views'
