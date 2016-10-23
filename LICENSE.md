@@ -1,4 +1,4 @@
-##Copyright (c) 2016 YOUR-NAME-HERE
+##Copyright (c) Douglas Osborn
 
 #MIT License
 
