@@ -3,13 +3,13 @@ require 'tilt/erubis'
 require 'json'
 require 'yaml'
 
-require_relative 'pivertiser/helpers'
-require_relative 'pivertiser/racks'
+require_relative 'wheresMyPi/helpers'
+require_relative 'wheresMyPi/racks'
 
-module Pivertiser
+module WheresMyPi
   class App < Sinatra::Base
     helpers do
-      include Pivertiser::Helpers
+      include WheresMyPi::Helpers
     end
 
     PI_RACK = {}
@@ -20,14 +20,14 @@ module Pivertiser
       respond_to do |wants|
         wants.html do
           @content = "<h1>Raspis we've heard from recently</h1>"
-          @title = 'Pivertiser'
+          @title = 'WheresMyPi'
           @github_url = CONFIG['github_url']
           erb :index, layout: :default
         end
 
         wants.json do
           {
-            app: 'Pivertiser'
+            app: 'WheresMyPi'
           }.to_json
         end
       end
